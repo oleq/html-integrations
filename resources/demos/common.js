@@ -27,5 +27,5 @@ export function setEditorAndWirisVersion(editorVersion, wirisVersion) {
  */
 export function updateContent(editorContent, containerId) {
   document.getElementById(containerId).innerHTML = editorContent;
-  com.wiris.js.JsPluginViewer.parseElement(document.getElementById(containerId)); //eslint-disable-line
+  com.wiris.js.JsPluginViewer.parseElement(document.getElementById(containerId), true); //eslint-disable-line
 }
