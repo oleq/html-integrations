@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FormControl, FormGroup } from '@angular/forms';
 // Import common resources.
 import * as Generic from 'resources/demos/angular-imports';
 
@@ -32,6 +32,13 @@ export class AppComponent {
 
   // Initializate the editor content.
   public content: string = editorContent;
+
+  profileForm = new FormGroup({
+    formModel: new FormControl(''),
+  });
+
+  onSubmit() {
+  }
 
   // Set options for the editor.
   public options: Object = {

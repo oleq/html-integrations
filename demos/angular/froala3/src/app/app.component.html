@@ -1,4 +1,7 @@
 <!-- Pass options and content to the component. -->
-<div [froalaEditor]="options" [(froalaModel)]="content"></div>
-
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <textarea [froalaEditor]="options" formControlName="formModel" [(froalaModel)]="profileForm[0]"></textarea>
+    <div [froalaView]="profileForm[0]"></div>
+    <button type="submit">Submit</button>
+</form>
 

@@ -21,6 +21,8 @@ require('@wiris/mathtype-froala3')
 // 2.6 Import Angular plugin.
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -28,7 +30,9 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
   imports: [
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+        ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
