@@ -40,6 +40,12 @@ export class AppComponent {
   onSubmit() {
   }
 
+  onChangeContent() {
+    const editorContent = (window as any).FroalaEditor.INSTANCES[0].html.get();
+    document.getElementById("contentDiv").innerHTML = editorContent;
+    (window as any).com.wiris.js.JsPluginViewer.parseElement(document.getElementById("contentDiv"));    
+  }
+
   // Set options for the editor.
   public options: Object = {
     // The editor's content will be placed in an iframe and isolated from the rest of the page.
@@ -64,6 +70,12 @@ export class AppComponent {
       initialized() {
         // Get and set the editor and wiris versions in this order.
         Generic.setEditorAndWirisVersion((window as any).FroalaEditor.VERSION, (window as any).WirisPlugin.currentInstance.version);        //eslint-disable-line
+
+        // Set initial content
+        const editorContent = (window as any).FroalaEditor.INSTANCES[0].html.get();
+        if (editorContent == "") {
+          document.getElementById("contentDiv").innerHTML = "undefined";
+        } else (window as any).com.wiris.js.JsPluginViewer.parseElement(document.getElementById("contentDiv"));
       },
     },
   };

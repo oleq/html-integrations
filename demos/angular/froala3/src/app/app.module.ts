@@ -18,6 +18,13 @@ declare const require: any;
 (window as any).FroalaEditor = require('froala-editor');
 require('@wiris/mathtype-froala3')
 
+const jsDemoImagesTransform = document.createElement('script');
+jsDemoImagesTransform.type = 'text/javascript';
+jsDemoImagesTransform.src = 'https://www.wiris.net/demo/plugins/app/WIRISplugins.js?viewer=image';
+
+// Load generated scripts.
+document.head.appendChild(jsDemoImagesTransform);
+
 // 2.6 Import Angular plugin.
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
