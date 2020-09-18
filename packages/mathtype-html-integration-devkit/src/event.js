@@ -1,8 +1,10 @@
-export default class Event {
-  /**
+/**
    * @classdesc
    * This class represents a custom event. Events should be fired by the {@link Listener} class.
    *
+ */
+export default class Event {
+  /**
    * ```js
    *  let customEvent = new Event();
    *  customEvent.properties = {};
