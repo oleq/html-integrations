@@ -1,0 +1,42 @@
+{
+    "reactCKEditor5": {
+        "path": "./demos/react/ckeditor5/README.md",
+        "dest": "docs/pages/tutorials/react/",
+        "name": "ckeditor5.html"
+    },
+    "reactFroala3": {
+        "path": "./demos/react/froala3/README.md",
+        "dest": "docs/pages/tutorials/react/",
+        "name": "froala3.html"
+    },
+    "reactGeneric": {
+        "path": "./demos/react/generic/README.md",
+        "dest": "docs/pages/tutorials/react/",
+        "name": "generic.html"
+    },
+    "reactTinyMCE5": {
+        "path": "./demos/react/tinymce5/README.md",
+        "dest": "docs/pages/tutorials/react/",
+        "name": "tinymce.html"
+    },
+    "angularCKEditor5": {
+        "path": "./demos/angular/ckeditor5/README.md",
+        "dest": "docs/pages/tutorials/angular/",
+        "name": "ckeditor5.html"
+    },
+    "angularFroala3": {
+        "path": "./demos/angular/froala3/README.md",
+        "dest": "docs/pages/tutorials/angular/",
+        "name": "froala3.html"
+    },
+    "angularGeneric": {
+        "path": "./demos/angular/generic/README.md",
+        "dest": "docs/pages/tutorials/angular/",
+        "name": "generic.html"
+    },
+    "angularTinyMCE5": {
+        "path": "./demos/angular/tinymce5/README.md",
+        "dest": "docs/pages/tutorials/angular/",
+        "name": "tinymce.html"
+    }
+}

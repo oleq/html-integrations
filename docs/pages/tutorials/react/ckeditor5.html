@@ -1,0 +1,103 @@
+<h1>CKEditor integration in ReactJS</h1>
+<p>A simple ReactJS App integrating WIRIS MathType on a CKEditor 5 and step-by-step information on how to build it. The  code of this example loads a rich text editor instance with a default value.</p>
+<h2>Requirements</h2>
+<ul>
+<li><strong>npm</strong> (<em>Currently</em> v6.13.4)</li>
+<li><strong>create-react-app</strong> (<em>Currently</em> v3.4.1)</li>
+</ul>
+<h2>How to run the demo</h2>
+<pre><code class="language-sh">$ npm install
+$ npm run deploy
+</code></pre>
+<p>Runs the app in the development mode.&lt;br /&gt;
+Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+<p>The page will reload if you make edits.&lt;br /&gt;
+You will also see any lint errors in the console.</p>
+<h2>How to add MathType to CKEditor from scratch</h2>
+<ol>
+<li>
+<p>Run the following through the terminal</p>
+<p>Notice that <strong>$APP_NAME</strong> needs to be replaced by the name that you choose.</p>
+<pre><code class="language-sh">$ create-react-app $APP_NAME
+$ cd $APP_NAME
+$ npm install --save @ckeditor/ckeditor5-react
+$ npm install @wiris/mathtype-ckeditor5
+</code></pre>
+</li>
+<li>
+<p>Replace all the content in <em>src/index.js</em> by:</p>
+<pre><code class="language-js">// Default create-react-app imports
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
+
+// Import CKEditor 5 WYSIWYG editor component for React.
+import CKEditor from '@ckeditor/ckeditor5-react';
+
+// Import CKEditor custom build.
+import * as ClassicEditor from './ckeditor';
+
+// Set the initial content of the editor.
+const content = '&lt;p class=&quot;text&quot;&gt; Double click on the following formula to edit it.&lt;/p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;math&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;&amp;PlusMinus;&lt;/mo&gt;&lt;msqrt&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;&lt;/p&gt;';
+
+// Define the toolbar icons to be shown
+const toolbar = ['bold', 'italic', 'MathType', 'ChemType', 'alignment:left', 'alignment:center', 'alignment:right'];
+
+// Initialize editor &amp; define the configuration options for the CKEditor.
+const ckConfig = {
+    iframe: true,
+    charCounterCount: false,
+    toolbar: toolbar,
+    htmlAllowedTags: ['.*'],
+    htmlAllowedAttrs: ['.*'],
+    htmlAllowedEmptyTags: ['mprescripts'],
+    imageResize : false,
+    useClasses: false
+};
+
+/* Create a component to be rendered later.
+This is important to remove complexity from the reactDom.render
+and to be able to add other functionality. */
+class Editor extends React.Component {
+    render() {
+        return (
+            &lt;CKEditor editor = { ClassicEditor } config={ ckConfig } data = { content } /&gt;
+        );
+    }
+}
+
+ReactDOM.render(&lt;Editor /&gt;, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
+</code></pre>
+<p><em>Note that the <strong>content</strong> can be empty or anything you want to set as the initial editor content.</em></p>
+</li>
+<li>
+<p>Create a custom build to integrate wiris plugins and more. &lt;br&gt;
+a. Follow this <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">GUIDE</a> on how to create a custom Classic editor build and the steps and advice we give you below. &lt;br&gt;
+b. The wiris dependency you will need to install when following the guide is:
+<code>     npm install @wiris/mathtype-ckeditor5     </code> &lt;br&gt;
+c. You can also add as many plugins as your project will need which are not on the default ClassicEditor build (We also added the align plugin). &lt;br&gt;
+d. We recommend you to just clone the branch and copy the compiled file with the editor and the new configurations placed on <strong>build/ckeditor.js</strong> on your project src folder. If you decide to do it by other ways (found in the guide above), you will have to change the way the custom build is imported on your app.component.ts file.</p>
+</li>
+<li>
+<p>Finally, you are ready to run the development server through the specified commant <code>npm run start</code></p>
+</li>
+</ol>
+<h2>How to run the tests</h2>
+<pre><code class="language-sh">$ npm run test
+</code></pre>
+<p>Launches the test runner in the interactive watch mode.&lt;br /&gt;
+See the section about <a href="https://facebook.github.io/create-react-app/docs/running-tests">running tests</a> for more information.</p>
+<h2>Learn More</h2>
+<p>Checkout the <a href="FAQs.md">FAQ</a> file learn more about the most frequent asked questions.</p>
+<p>You can learn more in the <a href="https://facebook.github.io/create-react-app/docs/getting-started">Create React App documentation</a>.</p>
+<p>To learn React, check out the <a href="https://reactjs.org/">React documentation</a>.</p>
+<p>For more information about the CKEditor or it’s options, you can check their <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html">documentation</a>.</p>
+<p>To get more information about wiris MathType you can check on the <a href="http://www.wiris.com/mathtype">official documentation</a></p>
+<h2>License</h2>
+<p>Copyright © 2010-2020 <a href="http://www.wiris.com">WIRIS</a>. Released under the <a href="../../../LICENSE">MIT License</a>.</p>

@@ -1,0 +1,130 @@
+<h1>Froala integration in Angular</h1>
+<p>A simple Angular App integrating WIRIS MathType on a Froala 3 and step-by-step information on how to build it. The  code of this example loads a rich text editor instance with a default value.</p>
+<h2>Requirements</h2>
+<ul>
+<li><strong>npm</strong> (<em>Currently</em> v6.13.4)</li>
+<li><strong>@angular/cli</strong> (<em>Currently</em> v9.1.4)</li>
+</ul>
+<h2>How to run the demo</h2>
+<pre><code class="language-sh">$ npm install
+$ npm run deploy
+</code></pre>
+<p><em>More information on the different ways to run a demo <a href="../../README.md">here</a></em></p>
+<p>Runs the app in the development mode.&lt;br /&gt;
+Open <a href="http://localhost:4200/">http://localhost:4200/</a> to view it in the browser.</p>
+<p>The page will reload if you make edits.&lt;br /&gt;
+You will also see any lint errors in the console.</p>
+<h2>How to add MathType to TinyMCE from scratch</h2>
+<ol>
+<li>
+<p>Run the following through the terminal</p>
+<p>Notice that <strong>$APP_NAME</strong> needs to be replaced by the name that you choose.</p>
+<pre><code class="language-sh">$ ng new $APP_NAME
+$ cd $APP_NAME
+$ npm install --save angular-froala-wysiwyg
+$ npm install --save froala-editor
+$ npm install --save @wiris/mathtype-froala3
+</code></pre>
+</li>
+<li>
+<p>Open the <em>src/app/app.module.ts</em> file and add:</p>
+<pre><code class="language-ts">// From Froala instructions.
+// Import all Froala Editor plugins.
+import 'froala-editor/js/plugins.pkgd.min.js';
+
+// Expose FroalaEditor instance to window.
+declare const require: any;
+(window as any).FroalaEditor = require('froala-editor');
+require('@wiris/mathtype-froala3'); // Import WIRIS Mathtype formula editor.
+
+// Import Angular plugin.
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+</code></pre>
+<p>...</p>
+<pre><code class="language-ts">@NgModule({
+    ...
+    imports: [... FroalaEditorModule.forRoot(), FroalaViewModule.forRoot() ... ],
+    ...
+})
+</code></pre>
+</li>
+<li>
+<p>Open <em>.angular.json</em> file and add:</p>
+<pre><code class="language-json">&quot;styles&quot;: [
+    &quot;styles.css&quot;,
+    &quot;../node_modules/froala-editor/css/froala_editor.pkgd.min.css&quot;,
+    &quot;../node_modules/froala-editor/css/froala_style.min.css&quot;
+]
+</code></pre>
+</li>
+<li>
+<p>Open <em>src/app/app.component.ts</em> and replace all with:</p>
+<pre><code class="language-ts">import { Component } from '@angular/core';
+
+// Load WIRISplugins.js dynamically
+const jsDemoImagesTransform = document.createElement('script');
+jsDemoImagesTransform.type = 'text/javascript';
+jsDemoImagesTransform.src = 'https://www.wiris.net/demo/plugins/app/WIRISplugins.js?viewer=image';
+// Load generated scripts.
+document.head.appendChild(jsDemoImagesTransform);
+
+@Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+    
+    // Set App Title.
+    title = 'Angular froala3 demo';
+    
+    // Initialize the editor content.
+    public content: string = '&lt;p class=&quot;text&quot;&gt; Double click on the following formula to edit it.&lt;/p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;math&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;&amp;PlusMinus;&lt;/mo&gt;&lt;msqrt&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;&lt;/p&gt;';
+    
+    // Set options for the editor.
+    public options: Object = {
+        // The editor's content will be placed in an iframe and isolated from the rest of the page.
+        iframe: true,
+        charCounterCount: false,
+        toolbarInline: false,
+        toolbarButtons: ['bold', 'italic', 'undo', 'redo', 'wirisEditor', 'wirisChemistry'],
+        htmlAllowedTags:  ['.*'],
+        htmlAllowedAttrs: ['.*'],
+        
+        // The edited content will have the external CSS properties converted to inline style.
+        useClasses: false,
+        
+        // List of tags that are not removed when they have no content inside.
+        htmlAllowedEmptyTags: ['mprescripts'],
+        
+        // Disables image resize
+        imageResize : false,
+    };
+}
+</code></pre>
+<p><em>Notice that the content can be empty or set as you prefer in the component</em></p>
+</li>
+<li>
+<p>Open <em>src/app/app.component.html</em> and replace all with:</p>
+<pre><code class="language-html">&lt;h1&gt;Angular and Froala 3 demo&lt;/h1&gt;
+&lt;!-- Pass options and content to the component. --&gt;
+&lt;div id=&quot;editor&quot; [froalaEditor]=&quot;options&quot; [(froalaModel)]=&quot;content&quot;&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li>
+<p>Finally, you are ready to run the development server through the specified command <code>ng serve</code></p>
+</li>
+</ol>
+<h2>How to run the tests</h2>
+<pre><code class="language-sh">$ npm run test
+</code></pre>
+<p>Execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
+<h2>Learn More</h2>
+<p>Checkout the <a href="FAQs.md">FAQ</a> file learn more about the most frequent asked questions.</p>
+<p>You can learn more in the <a href="https://angular.io/cli/new">Create Angular App documentation</a>.</p>
+<p>To learn more about Angular, check out the <a href="https://angular.io/">Angular documentation</a>.</p>
+<p>For more information about the Froala or it’s options, you can check their <a href="https://froala.com/wysiwyg-editor/docs/framework-plugins/angularjs-2-4/">documentation</a>.</p>
+<p>To get more information about wiris MathType you can check on the <a href="http://www.wiris.com/mathtype">official documentation</a></p>
+<h2>License</h2>
+<p>Copyright © 2010-2020 <a href="http://www.wiris.com">WIRIS</a>. Released under the <a href="../../../LICENSE">MIT License</a>.</p>
