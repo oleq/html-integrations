@@ -22,7 +22,6 @@ export default class Accessibility {
    * Static property setter.
    * Set accessibility cache.
    * @param {TextCahe} value - The property value.
-   * @ignore
    */
   static set cache(value) {
     Accessibility._cache = value;
@@ -33,7 +32,12 @@ export default class Accessibility {
    * @param {String} mathML - MathML to be converted to accessible text.
    * @param {String} [language] - Language of the accessible text. 'en' by default.
    * @param {Array.<String>} [data] - Parameters to send to mathml2accessible service.
+   * Empty, by default
    * @return {String} Accessibility text.
+   * @author Manuel Cagigas <manuel@wiris.com>
+   * @example
+   * // returns 1 plus 2
+   * Accessibility.mathMLToAccessible('<math><mn>1</mn><mo>+</mo><mn>2</mn></math>')
    */
   static mathMLToAccessible(mathML, language, data) {
     if (typeof (language) === 'undefined') {
