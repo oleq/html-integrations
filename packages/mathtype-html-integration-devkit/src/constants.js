@@ -31,7 +31,7 @@ export default class Constants {
 
   /**
    * Blackboard valid safe characters.
-   * @type{Object}
+   * @type {Object}
    */
   static get safeGoodBlackboardCharacters() {
     return {

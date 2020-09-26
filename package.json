@@ -12,7 +12,9 @@
     "clean": "npx lerna run clean & npx rimraf output",
     "clean-all": "npm run clean & npx rimraf node_modules packages/*/node_modules demos/**/*/node_modules",
     "test": "node scripts/services/executeTests.js",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "generate-docs": "jsdoc --configure .jsdoc.json --verbose",
+    "_jsdoc": "node ./node_modules/jsdoc/jsdoc.js -c jsdoc.conf.json"
   },
   "husky": {
     "hooks": {
@@ -31,14 +33,19 @@
     "lerna": "^3.22.1",
     "rimraf": "^3.0.0",
     "stylelint": "^13.3.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "tui-jsdoc-template": "^1.0.0",
+    "ub-jsdoc": "^2.4.2"
   },
   "license": "MIT",
   "author": "WIRIS Team (http://www.wiris.com)",
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
+    "@ckeditor/jsdoc-plugins": "^23.5.1",
     "babel-jest": "^24.9.0",
+    "jsdoc": "^3.6.6",
+    "markdown-it": "^11.0.1",
     "wait-for-localhost": "^3.3.0"
   }
 }
