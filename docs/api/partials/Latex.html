@@ -1,0 +1,675 @@
+<h1 class="page-title">Latex</h1>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Latex
+        </h2>
+        
+            <div class="class-description"><p>This class represents a LaTeX parser. Manages the services which allows to convert
+LaTeX into MathML and MathML into LaTeX.</p></div>
+        
+    
+</header>
+
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name " id="Latex">new <a href="latex.js.html#line12">Latex</a><span class="signature">()</span><span class="type-signature"></span>
+
+    
+
+    </h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h2 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="._cache"><a href="latex.js.html#line303">_cache</a><span class="type-signature">: Cache</span>
+
+   <span class="member-attr static">static</span>
+
+</h4>
+
+
+
+
+<div class="description">
+    <p>Text cache. Stores all processed LaTeX strings and it's correspondent MathML string.</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".cache"><a href="latex.js.html#line19">cache</a><span class="type-signature">: Cache</span>
+
+   <span class="member-attr private">private</span>
+
+   <span class="member-attr static">static</span>
+
+</h4>
+
+
+
+
+<div class="description">
+    <p>Static property.
+Return latex cache.</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h2 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name " id=".getLatexFromMathML"><a href="latex.js.html#line39">getLatexFromMathML</a><span class="signature">(mathml)</span><span class="type-signature"> &rarr;  String</span>
+
+    
+      <span class="member-attr static">static</span>
+    
+
+    </h4>
+
+    
+
+
+
+<div class="description">
+    <p>Converts MathML to LaTeX by calling mathml2latex service. For text services
+we call a text service with the param mathml2latex.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Arguments:</h5>
+    
+
+<ol>
+  
+  <li>
+     <code>mathml</code> <code>(<span class="param-type">String</span>)</code>&nbsp;&nbsp<p>MathML String.</p>
+     
+  </li>
+  
+</ol>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name " id=".getLatexFromTextNode"><a href="latex.js.html#line180">getLatexFromTextNode</a><span class="signature">(textNode, caretPosition, latexTags)</span><span class="type-signature"> &rarr;  Object</span>
+
+    
+      <span class="member-attr static">static</span>
+    
+
+    </h4>
+
+    
+
+
+
+<div class="description">
+    <p>Extracts the latex of a determined position in a text.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Arguments:</h5>
+    
+
+<ol>
+  
+  <li>
+     <code>textNode</code> <code>(<span class="param-type">Node</span>)</code>&nbsp;&nbsp<p>textNode to extract the LaTeX</p>
+     
+  </li>
+  
+  <li>
+     <code>caretPosition</code> <code>(<span class="param-type">Number</span>)</code>&nbsp;&nbsp<p>Starting position to find LaTeX.</p>
+     
+  </li>
+  
+  <li>
+     <code>latexTags</code> <code>(<span class="param-type">Object</span>)</code>&nbsp;&nbsp<p>Optional parameter representing tags between latex is inserted.
+It has the 'open' attribute for the open tag and the 'close' attribute for the close tag.
+&quot;$$&quot; by default.</p>
+     
+  </li>
+  
+</ol>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name " id=".getMathMLFromLatex"><a href="latex.js.html#line75">getMathMLFromLatex</a><span class="signature">(latex, includeLatexOnSemantics)</span><span class="type-signature"> &rarr;  String</span>
+
+    
+      <span class="member-attr static">static</span>
+    
+
+    </h4>
+
+    
+
+
+
+<div class="description">
+    <p>Converts LaTeX to MathML by calling latex2mathml service. For text services
+we call a text service with the param latex2mathml.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Arguments:</h5>
+    
+
+<ol>
+  
+  <li>
+     <code>latex</code> <code>(<span class="param-type">String</span>)</code>&nbsp;&nbsp<p>String containing a LaTeX formula.</p>
+     
+  </li>
+  
+  <li>
+     <code>includeLatexOnSemantics</code> <code>(<span class="param-type">Boolean</span>)</code>&nbsp;&nbsp<ul>
+<li>If true LaTeX would me included into MathML semantics.</li>
+</ul>
+     
+  </li>
+  
+</ol>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name " id=".parseMathmlToLatex"><a href="latex.js.html#line124">parseMathmlToLatex</a><span class="signature">(content, characters)</span><span class="type-signature"> &rarr;  String</span>
+
+    
+      <span class="member-attr static">static</span>
+    
+
+    </h4>
+
+    
+
+
+
+<div class="description">
+    <p>Converts all occurrences of MathML code to LaTeX.
+The MathML code should containing <annotation encoding="LaTeX"/> to be converted.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Arguments:</h5>
+    
+
+<ol>
+  
+  <li>
+     <code>content</code> <code>(<span class="param-type">String</span>)</code>&nbsp;&nbsp<p>A string containing MathML valid code.</p>
+     
+  </li>
+  
+  <li>
+     <code>characters</code> <code>(<span class="param-type">Object</span>)</code>&nbsp;&nbsp<p>An object containing special characters.</p>
+     
+  </li>
+  
+</ol>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+<div class="forScrollToTop"></div>

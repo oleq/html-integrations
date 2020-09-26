@@ -1,0 +1,28 @@
+{
+    "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc"]
+    },
+    "source": {
+      "include": ["packages/mathtype-html-integration-devkit/src"],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": [
+      "plugins/markdown",
+      "node_modules/@ckeditor/jsdoc-plugins/lib/export-fixer/export-fixer.js"
+    ],
+    "templates": {
+      "cleverLinks": false,
+      "monospaceLinks": true
+    },
+    "opts": {
+      "destination": "./docs/api",
+      "encoding": "utf8",
+      "private": true,
+      "recurse": true,
+      "whitelist": ["Optional", "List", "Of", "Top", "Level", "Classes"],
+      "title": "",
+      "template": "node_modules/tui-jsdoc-template"
+    }
+  }
