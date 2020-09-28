@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../prism.css">
+    <!-- GitBook Markdown CSS -->
+    <link rel="stylesheet" href="../../gitbook-style.css">
+    <title>Doc</title>
+</head>
+<body>
+<div data-server-rendered="true" class="source"><pre data-line="0" id="code" class="prettyprint source lang-javascript">         <code>
+             /* eslint-disable class-methods-use-this */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-extra-semi */
+
+// The rules above are disabled because we are implementing
+// an external interface.
+
+
+export default class EditorListener {
+  /**
+   * @classdesc
+   * Determines if the content of the
+   * MathType Editor has changes.
+   * @implements {EditorListeners}
+   * @constructs
+   */
+  constructor() {
+    /**
+     * Indicates if the content of the editor has changed.
+     * @type {Boolean}
+     */
+    this.isContentChanged = false;
+
+    /**
+     * Indicates if the listener should be waiting for changes in the editor.
+     * @type {Boolean}
+     */
+    this.waitingForChanges = false;
+  }
+
+  /**
+   * Sets {@link EditorListener.isContentChanged} property.
+   * @param {Boolean} value - The new vlue.
+   */
+  setIsContentChanged(value) {
+    this.isContentChanged = value;
+  }
+
+  /**
+   * Returns true if the content of the editor has been changed, false otherwise.
+   * @return {Boolean}
+   */
+  getIsContentChanged() {
+    return this.isContentChanged;
+  };
+
+  /**
+   * Determines if the EditorListener should wait for any changes.
+   * @param {Boolean} value - True if the editor should wait for changes, false otherwise.
+   */
+  setWaitingForChanges(value) {
+    this.waitingForChanges = value;
+  }
+
+  /**
+   * EditorListener method to overwrite.
+   * @type {JsEditor}
+   * @ignore
+   */
+  caretPositionChanged(_editor) { };
+
+  /**
+   * EditorListener method to overwrite
+   * @type {JsEditor}
+   * @ignore
+   */
+  clipboardChanged(_editor) { };
+
+  /**
+   * Determines if the content of an editor has been changed.
+   * @param {JsEditor} editor - editor object.
+   */
+  contentChanged(_editor) {
+    if (this.waitingForChanges === true &amp;&amp; this.isContentChanged === false) {
+      this.isContentChanged = true;
+    }
+  }
+
+  /**
+   * EditorListener method to overwrite
+   * @param {JsEditor} editor - The editor instance.
+   */
+  styleChanged(_editor) {
+  }
+
+  /**
+   * EditorListener method to overwrite
+   * @param {JsEditor} - The editor instance.
+   */
+  transformationReceived(_editor) {
+  }
+}
+
+         </code>
+    </pre></div>
+<!-- Optional JavaScript -->
+<script>
+  //fix intend for code tag
+  document.querySelectorAll('pre').forEach(node => {
+    if (node.childNodes[0].nodeName === '#text')
+      node.childNodes[0].parentNode.removeChild(node.childNodes[0])
+  })
+  document.querySelectorAll('code').forEach(node => node.textContent = node.textContent.trim())
+</script>
+
+<script src="../../prism.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

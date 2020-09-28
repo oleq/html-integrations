@@ -12,17 +12,72 @@
       "plugins/markdown",
       "node_modules/@ckeditor/jsdoc-plugins/lib/export-fixer/export-fixer.js"
     ],
-    "templates": {
-      "cleverLinks": false,
-      "monospaceLinks": true
-    },
     "opts": {
       "destination": "./docs/api",
       "encoding": "utf8",
       "private": true,
       "recurse": true,
       "whitelist": ["Optional", "List", "Of", "Top", "Level", "Classes"],
-      "title": "",
-      "template": "node_modules/tui-jsdoc-template"
+      "readme" : "readme_jsdoc.md",
+      "title": "sadasdasd",
+      "template" : "node_modules/ub-jsdoc"      
+    },
+    "extendedConfig": {
+      "navbar": {
+        "logo": {
+          "img": "https://unitybase.info/img/UB-logo.png",
+          "href": "index.html"
+        },
+        "nav": [
+          {
+            "href": "server-v5/index.html",
+            "name": "Server Docs"
+          },
+          {
+            "href": "ubpub-v5/index.html",
+            "name": "Client Docs"
+          },
+          {
+            "href": "server-v5/tutorialIndex.html",
+            "name": "Tutorials"
+          },
+          {
+            "href": "gettingstarted/index.html",
+            "name": "Getting Started"
+          }
+        ]
+      },
+      "extends": [
+        "./src/generators/gettingStarted",
+        "./src/generators/mainDocPage"
+      ]
+    },    
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": false,
+      "buildInURL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/",
+      "buildins": [
+        "array",
+        "arraybuffer",
+        "boolean",
+        "date",
+        "error",
+        "function",
+        "json",
+        "number",
+        "object",
+        "regexp",
+        "string",
+        "null"
+      ],
+      "smallSourceLink": true,
+      "hideAuthor": true,
+      "stylesheet": "styles/ub-jsdoc.css",
+      "default": {
+        "outputSourceFiles": true,
+        "staticFiles": {
+          "excludePattern": "\\.md$"
+        }
+      }
     }
   }

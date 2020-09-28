@@ -1,1081 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Class: TelemetryService | Class: TelemetryService</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism.css">
+    <!-- GitBook Markdown CSS -->
+    <link rel="stylesheet" href="../gitbook-style.css">
+    <title>Doc</title>
 
-    
 </head>
 <body>
-<nav class="lnb" id="lnb">
-    <div class="logo" style="">
-        
-            <img src="img/toast-ui.png" width="100%" height="100%">
-        
+<div class="dropdown">
+    <div class="dropdown-menu" id="search-result">
     </div>
-    <div class="title">
-        <h1><a href="index.html" class="link">Class: TelemetryService</a></h1>
-        
+</div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-1">
+    <div class="navbar-brand">
+        <a href="/">
+            <img src=https://unitybase.info/img/UB-logo.png class="d-inline-block align-middle logo mr2"
+                 alt="logo"></a>
+        <a href="../index.html">UB DOC</a>
     </div>
-    <div class="search-container" id="search-container">
-        <input type="text" placeholder="Search">
-        <ul></ul>
-    </div>
-    
-    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Accessibility.html">Accessibility</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Accessibility_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Accessibility.html#._cache">_cache</a></li><li><a href="Accessibility.html#.cache">cache</a></li><li><a href="Accessibility.html#.cache">cache</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Accessibility.html#.mathMLToAccessible">mathMLToAccessible</a></li></ul></div></li><li><a href="Configuration.html">Configuration</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Configuration_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Configuration.html#._properties">_properties</a></li><li><a href="Configuration.html#.properties">properties</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Configuration.html#.addConfiguration">addConfiguration</a></li><li><a href="Configuration.html#.get">get</a></li><li><a href="Configuration.html#.set">set</a></li><li><a href="Configuration.html#.update">update</a></li></ul></div></li><li><a href="Constants.html">Constants</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Constants_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Constants.html#.safeBadBlackboardCharacters">safeBadBlackboardCharacters</a></li><li><a href="Constants.html#.safeGoodBlackboardCharacters">safeGoodBlackboardCharacters</a></li><li><a href="Constants.html#.safeXmlCharacters">safeXmlCharacters</a></li><li><a href="Constants.html#.safeXmlCharactersEntities">safeXmlCharactersEntities</a></li><li><a href="Constants.html#.xmlCharacters">xmlCharacters</a></li></ul></div></li><li><a href="ContentManager.html">ContentManager</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ContentManager_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="ContentManager.html#customEditors">customEditors</a></li><li><a href="ContentManager.html#deviceProperties">deviceProperties</a></li><li><a href="ContentManager.html#editor">editor</a></li><li><a href="ContentManager.html#editorAttributes">editorAttributes</a></li><li><a href="ContentManager.html#editorListener">editorListener</a></li><li><a href="ContentManager.html#environment">environment</a></li><li><a href="ContentManager.html#integrationModel">integrationModel</a></li><li><a href="ContentManager.html#isNewElement">isNewElement</a></li><li><a href="ContentManager.html#language">language</a></li><li><a href="ContentManager.html#listeners">listeners</a></li><li><a href="ContentManager.html#mathML">mathML</a></li><li><a href="ContentManager.html#modalDialogInstance">modalDialogInstance</a></li><li><a href="ContentManager.html#toolbar">toolbar</a></li><li><a href="ContentManager.html#ua">ua</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="ContentManager.html#.getURLFromAnchorElement">getURLFromAnchorElement</a></li><li><a href="ContentManager.html#.isEditorLoaded">isEditorLoaded</a></li><li><a href="ContentManager.html#.setHrefToAnchorElement">setHrefToAnchorElement</a></li><li><a href="ContentManager.html#.setProtocolToAnchorElement">setProtocolToAnchorElement</a></li><li><a href="ContentManager.html#addEditorAsExternalDependency">addEditorAsExternalDependency</a></li><li><a href="ContentManager.html#addListener">addListener</a></li><li><a href="ContentManager.html#getToolbar">getToolbar</a></li><li><a href="ContentManager.html#hasChanges">hasChanges</a></li><li><a href="ContentManager.html#init">init</a></li><li><a href="ContentManager.html#insert">insert</a></li><li><a href="ContentManager.html#insertEditor">insertEditor</a></li><li><a href="ContentManager.html#onFocus">onFocus</a></li><li><a href="ContentManager.html#onKeyDown">onKeyDown</a></li><li><a href="ContentManager.html#onOpen">onOpen</a></li><li><a href="ContentManager.html#setEmptyMathML">setEmptyMathML</a></li><li><a href="ContentManager.html#setInitialContent">setInitialContent</a></li><li><a href="ContentManager.html#setIntegrationModel">setIntegrationModel</a></li><li><a href="ContentManager.html#setMathML">setMathML</a></li><li><a href="ContentManager.html#setModalDialogInstance">setModalDialogInstance</a></li><li><a href="ContentManager.html#setToolbar">setToolbar</a></li><li><a href="ContentManager.html#submitAction">submitAction</a></li><li><a href="ContentManager.html#updateTitle">updateTitle</a></li><li><a href="ContentManager.html#updateToolbar">updateToolbar</a></li></ul></div></li><li><a href="Core.html">Core</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Core_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Core.html#._globalListeners">_globalListeners</a></li><li><a href="Core.html#._initialized">_initialized</a></li><li><a href="Core.html#.globalListeners">globalListeners</a></li><li><a href="Core.html#.initialized">initialized</a></li><li><a href="Core.html#browser">browser</a></li><li><a href="Core.html#contentManager">contentManager</a></li><li><a href="Core.html#customEditors">customEditors</a></li><li><a href="Core.html#editionProperties">editionProperties</a></li><li><a href="Core.html#editMode">editMode</a></li><li><a href="Core.html#environment">environment</a></li><li><a href="Core.html#integrationModel">integrationModel</a></li><li><a href="Core.html#language">language</a></li><li><a href="Core.html#listeners">listeners</a></li><li><a href="Core.html#modalDialog">modalDialog</a></li><li><a href="Core.html#serviceProviderProperties">serviceProviderProperties</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Core.html#.addGlobalListener">addGlobalListener</a></li><li><a href="Core.html#addListener">addListener</a></li><li><a href="Core.html#getCustomEditors">getCustomEditors</a></li><li><a href="Core.html#getModalDialog">getModalDialog</a></li><li><a href="Core.html#init">init</a></li><li><a href="Core.html#insertElementOnSelection">insertElementOnSelection</a></li><li><a href="Core.html#insertFormula">insertFormula</a></li><li><a href="Core.html#openModalDialog">openModalDialog</a></li><li><a href="Core.html#placeCaretAfterNode">placeCaretAfterNode</a></li><li><a href="Core.html#setEnvironment">setEnvironment</a></li><li><a href="Core.html#setIntegrationModel">setIntegrationModel</a></li></ul></div></li><li><a href="CustomEditors.html">CustomEditors</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="CustomEditors_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="CustomEditors.html#activeEditor">activeEditor</a></li><li><a href="CustomEditors.html#editors">editors</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="CustomEditors.html#addEditor">addEditor</a></li><li><a href="CustomEditors.html#disable">disable</a></li><li><a href="CustomEditors.html#enable">enable</a></li><li><a href="CustomEditors.html#getActiveEditor">getActiveEditor</a></li></ul></div></li><li><a href="EditorListener.html">EditorListener</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="EditorListener_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="EditorListener.html#isContentChanged">isContentChanged</a></li><li><a href="EditorListener.html#waitingForChanges">waitingForChanges</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="EditorListener.html#contentChanged">contentChanged</a></li><li><a href="EditorListener.html#getIsContentChanged">getIsContentChanged</a></li><li><a href="EditorListener.html#setIsContentChanged">setIsContentChanged</a></li><li><a href="EditorListener.html#setWaitingForChanges">setWaitingForChanges</a></li><li><a href="EditorListener.html#styleChanged">styleChanged</a></li><li><a href="EditorListener.html#transformationReceived">transformationReceived</a></li></ul></div></li><li><a href="Event.html">Event</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Event_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Event.html#cancelled">cancelled</a></li><li><a href="Event.html#defaultPrevented">defaultPrevented</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Event.html#cancel">cancel</a></li><li><a href="Event.html#preventDefault">preventDefault</a></li></ul></div></li><li><a href="Image.html">Image</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Image_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Image.html#.clone">clone</a></li><li><a href="Image.html#.fixAfterResize">fixAfterResize</a></li><li><a href="Image.html#.getMetricsFromBytes">getMetricsFromBytes</a></li><li><a href="Image.html#.getMetricsFromSvgString">getMetricsFromSvgString</a></li><li><a href="Image.html#.removeImgDataAttributes">removeImgDataAttributes</a></li><li><a href="Image.html#.setImgSize">setImgSize</a></li></ul></div></li><li><a href="IntegrationModel.html">IntegrationModel</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="IntegrationModel_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="IntegrationModel.html#.integrationParameters">integrationParameters</a></li><li><a href="IntegrationModel.html#callbackMethodArguments">callbackMethodArguments</a></li><li><a href="IntegrationModel.html#configurationService">configurationService</a></li><li><a href="IntegrationModel.html#core">core</a></li><li><a href="IntegrationModel.html#editorObject">editorObject</a></li><li><a href="IntegrationModel.html#environment">environment</a></li><li><a href="IntegrationModel.html#isIframe">isIframe</a></li><li><a href="IntegrationModel.html#language">language</a></li><li><a href="IntegrationModel.html#listeners">listeners</a></li><li><a href="IntegrationModel.html#managesLanguage">managesLanguage</a></li><li><a href="IntegrationModel.html#rtl">rtl</a></li><li><a href="IntegrationModel.html#serviceProviderProperties">serviceProviderProperties</a></li><li><a href="IntegrationModel.html#target">target</a></li><li><a href="IntegrationModel.html#temporalImageResizing">temporalImageResizing</a></li><li><a href="IntegrationModel.html#version">version</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="IntegrationModel.html#addEvents">addEvents</a></li><li><a href="IntegrationModel.html#callbackFunction">callbackFunction</a></li><li><a href="IntegrationModel.html#doubleClickHandler">doubleClickHandler</a></li><li><a href="IntegrationModel.html#fillNonLatexNode">fillNonLatexNode</a></li><li><a href="IntegrationModel.html#getBrowserLanguage">getBrowserLanguage</a></li><li><a href="IntegrationModel.html#getCore">getCore</a></li><li><a href="IntegrationModel.html#getLanguage">getLanguage</a></li><li><a href="IntegrationModel.html#getMathmlFromTextNode">getMathmlFromTextNode</a></li><li><a href="IntegrationModel.html#getPath">getPath</a></li><li><a href="IntegrationModel.html#getSelectedItem">getSelectedItem</a></li><li><a href="IntegrationModel.html#getSelection">getSelection</a></li><li><a href="IntegrationModel.html#getVersion">getVersion</a></li><li><a href="IntegrationModel.html#init">init</a></li><li><a href="IntegrationModel.html#insertFormula">insertFormula</a></li><li><a href="IntegrationModel.html#mousedownHandler">mousedownHandler</a></li><li><a href="IntegrationModel.html#mouseupHandler">mouseupHandler</a></li><li><a href="IntegrationModel.html#notifyWindowClosed">notifyWindowClosed</a></li><li><a href="IntegrationModel.html#openExistingFormulaEditor">openExistingFormulaEditor</a></li><li><a href="IntegrationModel.html#openNewFormulaEditor">openNewFormulaEditor</a></li><li><a href="IntegrationModel.html#setCore">setCore</a></li><li><a href="IntegrationModel.html#setEditorObject">setEditorObject</a></li><li><a href="IntegrationModel.html#setLanguage">setLanguage</a></li><li><a href="IntegrationModel.html#setTarget">setTarget</a></li><li><a href="IntegrationModel.html#updateFormula">updateFormula</a></li></ul></div></li><li><a href="Latex.html">Latex</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Latex_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Latex.html#._cache">_cache</a></li><li><a href="Latex.html#.cache">cache</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Latex.html#.getLatexFromMathML">getLatexFromMathML</a></li><li><a href="Latex.html#.getLatexFromTextNode">getLatexFromTextNode</a></li><li><a href="Latex.html#.getMathMLFromLatex">getMathMLFromLatex</a></li><li><a href="Latex.html#.parseMathmlToLatex">parseMathmlToLatex</a></li></ul></div></li><li><a href="Listeners.html">Listeners</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Listeners_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Listeners.html#listeners">listeners</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Listeners.html#.newListener">newListener</a></li><li><a href="Listeners.html#add">add</a></li><li><a href="Listeners.html#fire">fire</a></li></ul></div></li><li><a href="MathML.html">MathML</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="MathML_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="MathML.html#.addAnnotation">addAnnotation</a></li><li><a href="MathML.html#.addCustomEditorClassAttribute">addCustomEditorClassAttribute</a></li><li><a href="MathML.html#.containClass">containClass</a></li><li><a href="MathML.html#.encodeProperties">encodeProperties</a></li><li><a href="MathML.html#.isEmpty">isEmpty</a></li><li><a href="MathML.html#.isMathmlInAttribute">isMathmlInAttribute</a></li><li><a href="MathML.html#.mathMLEntities">mathMLEntities</a></li><li><a href="MathML.html#.removeAnnotation">removeAnnotation</a></li><li><a href="MathML.html#.removeCustomEditorClassAttribute">removeCustomEditorClassAttribute</a></li><li><a href="MathML.html#.removeSemantics">removeSemantics</a></li><li><a href="MathML.html#.removeSemanticsOcurrences">removeSemanticsOcurrences</a></li><li><a href="MathML.html#.safeXmlDecode">safeXmlDecode</a></li><li><a href="MathML.html#.safeXmlEncode">safeXmlEncode</a></li></ul></div></li><li><a href="ModalDialog.html">ModalDialog</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ModalDialog_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="ModalDialog.html#deviceProperties">deviceProperties</a></li><li><a href="ModalDialog.html#rtl">rtl</a></li><li><a href="ModalDialog.html#websiteBeforeLockParameters">websiteBeforeLockParameters</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="ModalDialog.html#activateResizeStateBR">activateResizeStateBR</a></li><li><a href="ModalDialog.html#activateResizeStateTL">activateResizeStateTL</a></li><li><a href="ModalDialog.html#addClass">addClass</a></li><li><a href="ModalDialog.html#addListeners">addListeners</a></li><li><a href="ModalDialog.html#cancelAction">cancelAction</a></li><li><a href="ModalDialog.html#close">close</a></li><li><a href="ModalDialog.html#create">create</a></li><li><a href="ModalDialog.html#createModalWindowAndroid">createModalWindowAndroid</a></li><li><a href="ModalDialog.html#createModalWindowDesktop">createModalWindowDesktop</a></li><li><a href="ModalDialog.html#createModalWindowIos">createModalWindowIos</a></li><li><a href="ModalDialog.html#createResizeButtons">createResizeButtons</a></li><li><a href="ModalDialog.html#createSubmitButton">createSubmitButton</a></li><li><a href="ModalDialog.html#drag">drag</a></li><li><a href="ModalDialog.html#eventClient">eventClient</a></li><li><a href="ModalDialog.html#focus">focus</a></li><li><a href="ModalDialog.html#getContentManager">getContentManager</a></li><li><a href="ModalDialog.html#getElementId">getElementId</a></li><li><a href="ModalDialog.html#getLimitWindow">getLimitWindow</a></li><li><a href="ModalDialog.html#getScrollBarWidth">getScrollBarWidth</a></li><li><a href="ModalDialog.html#handleClosedIosSoftkeyboard">handleClosedIosSoftkeyboard</a></li><li><a href="ModalDialog.html#handleOpenedIosSoftkeyboard">handleOpenedIosSoftkeyboard</a></li><li><a href="ModalDialog.html#hideKeyboard">hideKeyboard</a></li><li><a href="ModalDialog.html#initializeResizeProperties">initializeResizeProperties</a></li><li><a href="ModalDialog.html#isIE11">isIE11</a></li><li><a href="ModalDialog.html#isRTL">isRTL</a></li><li><a href="ModalDialog.html#lockWebsiteScroll">lockWebsiteScroll</a></li><li><a href="ModalDialog.html#maximize">maximize</a></li><li><a href="ModalDialog.html#minimize">minimize</a></li><li><a href="ModalDialog.html#onKeyDown">onKeyDown</a></li><li><a href="ModalDialog.html#onWindowResize">onWindowResize</a></li><li><a href="ModalDialog.html#open">open</a></li><li><a href="ModalDialog.html#orientationChangeAndroidSoftkeyboard">orientationChangeAndroidSoftkeyboard</a></li><li><a href="ModalDialog.html#orientationChangeIosSoftkeyboard">orientationChangeIosSoftkeyboard</a></li><li><a href="ModalDialog.html#portraitMode">portraitMode</a></li><li><a href="ModalDialog.html#recalculatePosition">recalculatePosition</a></li><li><a href="ModalDialog.html#recalculateScale">recalculateScale</a></li><li><a href="ModalDialog.html#recalculateScrollBar">recalculateScrollBar</a></li><li><a href="ModalDialog.html#recalculateSize">recalculateSize</a></li><li><a href="ModalDialog.html#reExpand">reExpand</a></li><li><a href="ModalDialog.html#removeClass">removeClass</a></li><li><a href="ModalDialog.html#removeListeners">removeListeners</a></li><li><a href="ModalDialog.html#restoreModalProperties">restoreModalProperties</a></li><li><a href="ModalDialog.html#restoreState">restoreState</a></li><li><a href="ModalDialog.html#restoreWebsiteScale">restoreWebsiteScale</a></li><li><a href="ModalDialog.html#saveModalProperties">saveModalProperties</a></li><li><a href="ModalDialog.html#setContainerHeight">setContainerHeight</a></li><li><a href="ModalDialog.html#setContentManager">setContentManager</a></li><li><a href="ModalDialog.html#setPosition">setPosition</a></li><li><a href="ModalDialog.html#setResizeButtonsVisibility">setResizeButtonsVisibility</a></li><li><a href="ModalDialog.html#setSize">setSize</a></li><li><a href="ModalDialog.html#setTitle">setTitle</a></li><li><a href="ModalDialog.html#showPopUpMessage">showPopUpMessage</a></li><li><a href="ModalDialog.html#stack">stack</a></li><li><a href="ModalDialog.html#startDrag">startDrag</a></li><li><a href="ModalDialog.html#stopDrag">stopDrag</a></li><li><a href="ModalDialog.html#submitAction">submitAction</a></li><li><a href="ModalDialog.html#unlockWebsiteScroll">unlockWebsiteScroll</a></li></ul></div></li><li><a href="Parser.html">Parser</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Parser_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Parser.html#.codeImgTransform">codeImgTransform</a></li><li><a href="Parser.html#.createImageSrc">createImageSrc</a></li><li><a href="Parser.html#.createShowImageSrc">createShowImageSrc</a></li><li><a href="Parser.html#.endParse">endParse</a></li><li><a href="Parser.html#.endParseEditMode">endParseEditMode</a></li><li><a href="Parser.html#.endParseSaveMode">endParseSaveMode</a></li><li><a href="Parser.html#.initParse">initParse</a></li><li><a href="Parser.html#.initParseEditMode">initParseEditMode</a></li><li><a href="Parser.html#.initParseSaveMode">initParseSaveMode</a></li><li><a href="Parser.html#.mathmlToImgObject">mathmlToImgObject</a></li><li><a href="Parser.html#.parseMathmlToImg">parseMathmlToImg</a></li></ul></div></li><li><a href="PopUpMessage.html">PopUpMessage</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PopUpMessage_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="PopUpMessage.html#buttonArea">buttonArea</a></li><li><a href="PopUpMessage.html#cancelButton">cancelButton</a></li><li><a href="PopUpMessage.html#closeButton">closeButton</a></li><li><a href="PopUpMessage.html#message">message</a></li><li><a href="PopUpMessage.html#overlayElement">overlayElement</a></li><li><a href="PopUpMessage.html#overlayWrapper">overlayWrapper</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="PopUpMessage.html#cancelAction">cancelAction</a></li><li><a href="PopUpMessage.html#closeAction">closeAction</a></li><li><a href="PopUpMessage.html#createButton">createButton</a></li><li><a href="PopUpMessage.html#onKeyDown">onKeyDown</a></li><li><a href="PopUpMessage.html#show">show</a></li></ul></div></li><li><a href="ServiceProvider.html">ServiceProvider</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ServiceProvider_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="ServiceProvider.html#._integrationPath">_integrationPath</a></li><li><a href="ServiceProvider.html#._listeners">_listeners</a></li><li><a href="ServiceProvider.html#._parameters">_parameters</a></li><li><a href="ServiceProvider.html#._servicePaths">_servicePaths</a></li><li><a href="ServiceProvider.html#.integrationPath">integrationPath</a></li><li><a href="ServiceProvider.html#.listeners">listeners</a></li><li><a href="ServiceProvider.html#.parameters">parameters</a></li><li><a href="ServiceProvider.html#.parameters">parameters</a></li><li><a href="ServiceProvider.html#.servicePaths">servicePaths</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="ServiceProvider.html#.addListener">addListener</a></li><li><a href="ServiceProvider.html#.createServiceURI">createServiceURI</a></li><li><a href="ServiceProvider.html#.fireEvent">fireEvent</a></li><li><a href="ServiceProvider.html#.getServerLanguageFromService">getServerLanguageFromService</a></li><li><a href="ServiceProvider.html#.getServerURL">getServerURL</a></li><li><a href="ServiceProvider.html#.getService">getService</a></li><li><a href="ServiceProvider.html#.getServicePath">getServicePath</a></li><li><a href="ServiceProvider.html#.getUrl">getUrl</a></li><li><a href="ServiceProvider.html#.init">init</a></li><li><a href="ServiceProvider.html#.setServicePath">setServicePath</a></li></ul></div></li><li><a href="StringManager.html">StringManager</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="StringManager_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="StringManager.html#.language">language</a></li><li><a href="StringManager.html#.strings">strings</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="StringManager.html#.get">get</a></li></ul></div></li><li><a href="TelemetryService.html">TelemetryService</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="TelemetryService_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="TelemetryService.html#._senderId">_senderId</a></li><li><a href="TelemetryService.html#._sessionId">_sessionId</a></li><li><a href="TelemetryService.html#.deployment">deployment</a></li><li><a href="TelemetryService.html#.endpoint">endpoint</a></li><li><a href="TelemetryService.html#.sender">sender</a></li><li><a href="TelemetryService.html#.senderId">senderId</a></li><li><a href="TelemetryService.html#.session">session</a></li><li><a href="TelemetryService.html#.sessionId">sessionId</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="TelemetryService.html#.composeBody">composeBody</a></li><li><a href="TelemetryService.html#.composeUUID">composeUUID</a></li><li><a href="TelemetryService.html#.send">send</a></li></ul></div></li><li><a href="TextCache.html">TextCache</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="TextCache_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="TextCache.html#cache">cache</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="TextCache.html#get">get</a></li><li><a href="TextCache.html#populate">populate</a></li></ul></div></li><li><a href="Util.html">Util</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Util_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Util.html#.addArgument">addArgument</a></li><li><a href="Util.html#.addClass">addClass</a></li><li><a href="Util.html#.addElementEvents">addElementEvents</a></li><li><a href="Util.html#.addEvent">addEvent</a></li><li><a href="Util.html#.b64ToByteArray">b64ToByteArray</a></li><li><a href="Util.html#.compareStrings">compareStrings</a></li><li><a href="Util.html#.concatenateUrl">concatenateUrl</a></li><li><a href="Util.html#.containsClass">containsClass</a></li><li><a href="Util.html#.convertOldXmlinitialtextAttribute">convertOldXmlinitialtextAttribute</a></li><li><a href="Util.html#.createElement">createElement</a></li><li><a href="Util.html#.createHttpRequest">createHttpRequest</a></li><li><a href="Util.html#.createObject">createObject</a></li><li><a href="Util.html#.createObjectCode">createObjectCode</a></li><li><a href="Util.html#.decode64">decode64</a></li><li><a href="Util.html#.fireEvent">fireEvent</a></li><li><a href="Util.html#.fixedCharCodeAt">fixedCharCodeAt</a></li><li><a href="Util.html#.getElementsByNameFromString">getElementsByNameFromString</a></li><li><a href="Util.html#.getNodeLength">getNodeLength</a></li><li><a href="Util.html#.getSelectedItem">getSelectedItem</a></li><li><a href="Util.html#.getSelectedItemOnTextarea">getSelectedItemOnTextarea</a></li><li><a href="Util.html#.getWIRISImageOutput">getWIRISImageOutput</a></li><li><a href="Util.html#.htmlEntities">htmlEntities</a></li><li><a href="Util.html#.htmlEntitiesDecode">htmlEntitiesDecode</a></li><li><a href="Util.html#.httpBuildQuery">httpBuildQuery</a></li><li><a href="Util.html#.propertiesToString">propertiesToString</a></li><li><a href="Util.html#.readByte">readByte</a></li><li><a href="Util.html#.readBytes">readBytes</a></li><li><a href="Util.html#.readInt32">readInt32</a></li><li><a href="Util.html#.removeClass">removeClass</a></li><li><a href="Util.html#.removeEvent">removeEvent</a></li><li><a href="Util.html#.updateExistingTextOnTextarea">updateExistingTextOnTextarea</a></li><li><a href="Util.html#.updateTextArea">updateTextArea</a></li><li><a href="Util.html#.urlEncode">urlEncode</a></li><li><a href="Util.html#.urlToAssArray">urlToAssArray</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3><a href="global.html">Global</a></h3></div>
+
+    <ul class="navbar-nav">
+
+        <li class="nav-item dropdown d-xl-none d-lg-none d-md-none">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Links
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            </div>
+        </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
-<div id="resizer"></div>
-
-<div class="main" id="main">
-    
-
-
-
-
-<section>
-
-<header>
-    
-        <h2><span class="attribs"><span class="type-signature"></span></span>TelemetryService<span class="signature">()</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description"><p>Sends and receuives Wiris telemetry data.</p></div>
-        
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-<dt>
-    
-        <h4 class="name" id="TelemetryService">
-            
-                new <span class="type-signature"></span>TelemetryService<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-            <div class="container-source members">
-                <code><a href="telemetry.js.html">telemetry.js</a></code>,
-                <code><a href="telemetry.js.html#line7">line 7</a></code>
-            </div>
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-        
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-
-<dt>
-<h4 class="name" id="._senderId">
-    <span class="type-signature"><span class="icon green">private</span>, <span class="icon green">static</span> </span>_senderId<span class="type-signature"> :String</span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line222">line 222</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Stores the sender uuid.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id="._sessionId">
-    <span class="type-signature"><span class="icon green">private</span>, <span class="icon green">static</span> </span>_sessionId<span class="type-signature"> :String</span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line229">line 229</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Stores the session uuid.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deployment">
-    <span class="type-signature"><span class="icon green">static</span> </span>deployment<span class="type-signature"></span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line134">line 134</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Composes the deployment id key for 'mathtype-web-*'.
+<div class="container-fluid">
+    <div data-server-rendered="true" class="row flex-xl-nowrap"><div id="nav" class="col-12 col-md-3 col-xl-2 bd-sidebar collapse navbar-collapse"><form autocomplete="off" class="bd-search align-items-center my-2"><input type="search" placeholder="Search" aria-label="Search" id="search" class="form-control mr-sm-2"></form> <div class="sidebar"><ul id="accordionNav" class="main-nav accordion"><li><button type="button" data-toggle="collapse" data-target="#collapseClasses" aria-expanded="true" aria-controls="collapseClasses" class="btn"><span>Classes</span> <i class="fas fa-caret-down"></i></button> <div id="collapseClasses" aria-labelledby="headingClasses" data-parent="#accordionNav" class="collapse show"><ul class="sub-nav"><li><a href="Accessibility.html">Accessibility</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Constants.html">Constants</a></li><li><a href="ContentManager.html">ContentManager</a></li><li><a href="Core.html">Core</a></li><li><a href="CustomEditors.html">CustomEditors</a></li><li><a href="EditorListener.html">EditorListener</a></li><li><a href="Event.html">Event</a></li><li><a href="Image.html">Image</a></li><li><a href="IntegrationModel.html">IntegrationModel</a></li><li><a href="Latex.html">Latex</a></li><li><a href="Listeners.html">Listeners</a></li><li><a href="MathML.html">MathML</a></li><li><a href="ModalDialog.html">ModalDialog</a></li><li><a href="Parser.html">Parser</a></li><li><a href="PopUpMessage.html">PopUpMessage</a></li><li><a href="ServiceProvider.html">ServiceProvider</a></li><li><a href="StringManager.html">StringManager</a></li><li><a href="TelemetryService.html" class="current">TelemetryService</a></li><li><a href="TextCache.html">TextCache</a></li><li><a href="Util.html">Util</a></li></ul></div></li></ul></div></div> <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content markdown-section"><h3 class="page-breadcrumb"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="TelemetryService.html">TelemetryService</a></li></ol></nav></h3> <div id="TelemetryService" class="item border-bottom"><h5 class="alert alert-primary">
+                new TelemetryService(<!---->)<span data-id="TelemetryService" class="anchor">#</span></h5> <!----> <!----> <p></p> <div class="fromMD"><p><p>Sends and receuives Wiris telemetry data.</p></p></div></div> <h3 id="Members" class="subsection-title">Members</h3> <div id="_senderId" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.222">_senderId</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">String</a></span><!----><span class="badge badge-light">static</span> <a data-id="_senderId" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Stores the sender uuid.</p></p></div> <!----> <!----> <!----></div><div id="_sessionId" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.229">_sessionId</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">String</a></span><!----><span class="badge badge-light">static</span> <a data-id="_sessionId" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Stores the session uuid.</p></p></div> <!----> <!----> <!----></div><div id="deployment" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.134">deployment</a></span><!----><!----><span class="badge badge-light">static</span> <a data-id="deployment" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Composes the deployment id key for 'mathtype-web-*'.
 It follows the convention defined at the 'doc/adr/XXX-telemetry-deployment-name-convention'
-TODO: create the 'doc/adr'.</p>
-    </div>
-    
-
-    <!--
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".endpoint">
-    <span class="type-signature"><span class="icon green">private</span>, <span class="icon green">static</span> </span>endpoint<span class="type-signature"> :String</span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line215">line 215</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Stores the Telemetry endpoint host URL.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".sender">
-    <span class="type-signature"><span class="icon green">static</span> </span>sender<span class="type-signature"></span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line90">line 90</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Composes the 'sender' object for the Telemetry Service request call.</p>
-    </div>
-    
-
-    <!--
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".senderId">
-    <span class="type-signature"><span class="icon green">private</span>, <span class="icon green">static</span> </span>senderId<span class="type-signature"> :String</span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line18">line 18</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Static property.
-The sender uuid..</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".session">
-    <span class="type-signature"><span class="icon green">static</span> </span>session<span class="type-signature"></span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line80">line 80</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Composes the 'session' object for the Telemetry Service request call.</p>
-    </div>
-    
-
-    <!--
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".sessionId">
-    <span class="type-signature"><span class="icon green">private</span>, <span class="icon green">static</span> </span>sessionId<span class="type-signature"> :String</span>
-    
-    <div class="container-source members">
-        <code><a href="telemetry.js.html">telemetry.js</a></code>,
-        <code><a href="telemetry.js.html#line45">line 45</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Static property.
-The session uuid.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-                
-
-<dt>
-    
-        <h4 class="name" id=".composeBody">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>composeBody<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-            <div class="container-source members">
-                <code><a href="telemetry.js.html">telemetry.js</a></code>,
-                <code><a href="telemetry.js.html#line156">line 156</a></code>
-            </div>
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Given 'messages', composes the Telemetry request body as a JSON.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".composeUUID">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>composeUUID<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-            <div class="container-source members">
-                <code><a href="telemetry.js.html">telemetry.js</a></code>,
-                <code><a href="telemetry.js.html#line172">line 172</a></code>
-            </div>
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Helper function that generates a random UUID used to identify both the batch and the sender.
+TODO: create the 'doc/adr'.</p></p></div> <!----> <!----> <!----></div><div id="endpoint" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.215">endpoint</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">String</a></span><!----><span class="badge badge-light">static</span> <a data-id="endpoint" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Stores the Telemetry endpoint host URL.</p></p></div> <!----> <!----> <!----></div><div id="sender" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.90">sender</a></span><!----><!----><span class="badge badge-light">static</span> <a data-id="sender" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Composes the 'sender' object for the Telemetry Service request call.</p></p></div> <!----> <!----> <!----></div><div id="senderId" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.18">senderId</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">String</a></span><!----><span class="badge badge-light">static</span> <a data-id="senderId" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Static property.
+The sender uuid..</p></p></div> <!----> <!----> <!----></div><div id="session" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.80">session</a></span><!----><!----><span class="badge badge-light">static</span> <a data-id="session" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Composes the 'session' object for the Telemetry Service request call.</p></p></div> <!----> <!----> <!----></div><div id="sessionId" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.45">sessionId</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">String</a></span><!----><span class="badge badge-light">static</span> <a data-id="sessionId" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <div class="fromMD"><p><p>Static property.
+The session uuid.</p></p></div> <!----> <!----> <!----></div> <h3 id="Methods" class="subsection-title">Methods</h3> <div id="composeBody" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.156">composeBody</a></span>(<!---->)<!----><span class="badge badge-light">static</span><!----><a data-id="composeBody" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <!----> <div><div class="fromMD"><p><p>Given 'messages', composes the Telemetry request body as a JSON.</p></p></div> <!----> <!----> <!----></div></div><div id="composeUUID" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.172">composeUUID</a></span>(<!---->)<!----><span class="badge badge-light">static</span><!----><a data-id="composeUUID" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <!----> <div><div class="fromMD"><p><p>Helper function that generates a random UUID used to identify both the batch and the sender.
 Wikipedia: A universally unique identifier (UUID) is an identifier standard
 used in software construction. A UUID is simply a 128-bit value.
 The meaning of each bit is defined by any of several variants. For human-readable display,
-many systems use a canonical format using hexadecimal text with inserted hyphen characters.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".send">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>send<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-            <div class="container-source members">
-                <code><a href="telemetry.js.html">telemetry.js</a></code>,
-                <code><a href="telemetry.js.html#line55">line 55</a></code>
-            </div>
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Sends the specified array of messages to the telemetry endpoint.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            </dl>
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
+many systems use a canonical format using hexadecimal text with inserted hyphen characters.</p></p></div> <!----> <!----> <!----></div></div><div id="send" class="item border-bottom"><h5 class="alert alert-primary"><span><a href="source/source-src_telemetry.js.html#code.55">send</a></span>(<!---->)<!----><span class="badge badge-light">static</span><!----><a data-id="send" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-animation="false" data-content="Copied!" class="anchor">#</a></h5> <!----> <div><div class="fromMD"><p><p>Sends the specified array of messages to the telemetry endpoint.</p></p></div> <!----> <!----> <!----></div></div></main> <div class="d-none d-xl-block col-xl-2 bd-toc"><!----><div class="description"><a>Members</a> <ul><li><a href="#_senderId">_senderId</a></li><li><a href="#_sessionId">_sessionId</a></li><li><a href="#deployment">deployment</a></li><li><a href="#endpoint">endpoint</a></li><li><a href="#sender">sender</a></li><li><a href="#senderId">senderId</a></li><li><a href="#session">session</a></li><li><a href="#sessionId">sessionId</a></li></ul></div><div class="description"><a>Methods</a> <ul><li><a href="#composeBody">composeBody</a></li><li><a href="#composeUUID">composeUUID</a></li><li><a href="#send">send</a></li></ul></div><!----><!----></div></div>
 </div>
+<!-- Optional JavaScript -->
+<script>
+  // const buttons = document.querySelectorAll('button[data-toggle="collapse"]')
+  // buttons.forEach(btn => {
+  //   btn.addEventListener('click', (event) => {
+  //     // console.log(event.target)
+  //     buttons.forEach(b => {
+  //       b.childNodes[0].textContent = b === event.target && !b.getAttribute('aria-expanded') ? '►' : '▼'
+  //     })
+  //   })
+  // })
+</script>
+<script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.6.2/dist/flexsearch.min.js"></script>
 
-<footer>
-    <img class="logo" src="img/toast-ui.png" style="">
-    <div class="footer-text">NHN Entertainment. Frontend Development Lab</div>
-</footer>
-<script>prettyPrint();</script>
-<script src="scripts/jquery.min.js"></script>
-<script src="scripts/tui-doc.js"></script>
-<script src="scripts/linenumber.js"></script>
+<script>
+  //search
+  const feeds = new FlexSearch({
+      doc: {
+        id: 'id',
+        field: [
+          'name',
+          'description'
+        ]
+      }
+    }
+  )
+  const getFTSData = () => {
+    window.FTSData = window.FTSData ? Promise.resolve(window.FTSData) : Promise.all([
+      window.fetch('ftsIndex.json'),
+      window.fetch('ftsData.json')
+    ]).then(values => Promise.all([values[0].json(), values[1].json()]))
+      .then(valuesInJSON => {
+        feeds.import(valuesInJSON[0])
+        return {
+          ftsIndex: feeds,
+          ftsData: valuesInJSON[1]
+        }
+      })
+    return window.FTSData
+  }
+  const fullTextSearch = textToSearch => {
+    getFTSData().then(searchData => {
+      const result = searchData.ftsIndex.search(textToSearch)
+      const dataToDisplay = result.slice(0, 10).map(el =>
+              Object.assign(searchData.ftsData[el.id], {
+                name: el.name,
+                description: el.description
+              }))
+      document.querySelector('#search-result').classList.add('show')
+      document.querySelector('#search-result').innerHTML = dataToDisplay.length > 0 ? dataToDisplay
+              .map(el => renderItem(el, textToSearch)).join('<div class="dropdown-divider"></div>') : '<div class="dropdown-item">No results found</div>'
+    })
 
-    <script>
-        var id = 'TelemetryService_sub'.replace(/"/g, '_');
-        var selectedApi = document.getElementById(id); // do not use jquery selector
-        var $selectedApi = $(selectedApi);
+    const renderItem = (el, textToSearch) => {
+      const tranc = (fullText, searchText) => {
+        const letterCount = 100
+        const searchPos = fullText.indexOf(searchText)
+        return (searchPos > letterCount / 2) ?
+          fullText.slice(searchPos - letterCount / 2, searchPos + letterCount / 2) :
+          fullText.slice(0, letterCount)
+      }
+      const highlight = text => text.replace(new RegExp(textToSearch, 'ig'), `<span class="text-primary">$&</span>`)
+      return `<a href="${el.link}" class="dropdown-item search-item text-truncate">
+    <h6 class="text-truncate"><b>${highlight(el.parent)}</b></h6>
+    <span class="light-bold">${highlight(el.name)}</span><br>
+    ${el.description ? highlight(tranc(el.description, textToSearch)) : ''}</a>`
+    }
+  }
 
-        $selectedApi.removeClass('hidden');
-        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
-        showLnbApi();
-    </script>
+  document.querySelector('#search').addEventListener('input', (event) => {
+    if (event.target.value) {
+      fullTextSearch(event.target.value)
+    } else {
+      document.querySelector('#search-result').classList.remove('show')
+    }
+  })
+  document.querySelector('#search').addEventListener('search', (event) => {
+    if (event.target.value) {
+      fullTextSearch(event.target.value)
+    } else {
+      document.querySelector('#search-result').classList.remove('show')
+    }
+  })
+  document.querySelector('#search').addEventListener('focus', (event) => {
+    if (event.target.value) {
+      fullTextSearch(event.target.value)
+    }
+  })
+  document.querySelector('#search').addEventListener('blur', (event) => {
+    setTimeout(() => document.querySelector('#search-result').classList.remove('show'), 200)
+  })
+  document.querySelector('#search').addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      document.querySelector('#search-result').classList.remove('show')
+    }
+  })
+</script>
+
+
+<script src="../prism.js"></script>
+<script>
+  // copy link on click on anchor
+  document.querySelectorAll('.anchor').forEach(e =>
+          e.addEventListener('click', event => copyToClipboard(`${window.location.href.replace(window.location.hash, '')}#${event.currentTarget.dataset.id}`))
+  )
+
+  const copyToClipboard = str => new Promise(function (resolve, reject) {
+    let success = false
+    const listener = e => {
+      e.clipboardData.clearData()
+      e.clipboardData.setData('text/plain', str)
+      e.preventDefault()
+      success = true
+    }
+
+    document.addEventListener('copy', listener)
+    document.execCommand('copy')
+    document.removeEventListener('copy', listener)
+    success ? resolve() : reject()
+  })
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+
+<script>
+  //fix intend for code tag
+  document.querySelectorAll('pre').forEach(node => {
+    if (node.childNodes[0].nodeName === '#text')
+      node.childNodes[0].parentNode.removeChild(node.childNodes[0])
+  })
+  document.querySelectorAll('code').forEach(node => node.textContent = node.textContent.trim())
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/lunr@2/lunr.min.js"></script>-->
+<script src="../script.js"></script>
 
 </body>
 </html>

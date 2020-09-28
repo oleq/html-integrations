@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../prism.css">
+    <!-- GitBook Markdown CSS -->
+    <link rel="stylesheet" href="../../gitbook-style.css">
+    <title>Doc</title>
+</head>
+<body>
+<div data-server-rendered="true" class="source"><pre data-line="0" id="code" class="prettyprint source lang-javascript">         <code>
+             /**
+ * A custom editor is MathType editor with a different
+ * @typedef {Object} CustomEditor
+ * @property {String} CustomEditor.name - Custom editor name.
+ * @property {String} CustomEditor.toolbar - Custom editor toolbar.
+ * @property {String} CustomEditor.icon - Custom editor icon.
+ * @property {String} CustomEditor.confVariable - Configuration property to manage
+ * the availability of the custom editor.
+ * @property {String} CustomEditor.title - Custom editor modal dialog title.
+ * @property {String} CustomEditor.tooltip - Custom editor icon tooltip.
+ */
+
+export default class CustomEditors {
+  /**
+   * @classdesc
+   * This class represents the MathType custom editors manager.
+   * A custom editor is MathType editor with a custom  toolbar.
+   * This class associates a {@link CustomEditor} to:
+   * - It's own formulas
+   * - A custom toolbar
+   * - An icon to open it from a HTML editor.
+   * - A tooltip for the icon.
+   * - A global variable to enable or disable it globally.
+   * @constructs
+   */
+  constructor() {
+    /**
+     * The custom editors.
+     * @type {Array.&lt;CustomEditor&gt;}
+     */
+
+    this.editors = [];
+    /**
+     * The active editor name.
+     * @type {String}
+     */
+    this.activeEditor = 'default';
+  }
+
+  /**
+   * Adds a {@link CustomEditor} to editors array.
+   * @param {String} editorName - The editor name.
+   * @param {CustomEditor} editorParams - The custom editor parameters.
+   */
+  addEditor(editorName, editorParams) {
+    const customEditor = {};
+    customEditor.name = editorParams.name;
+    customEditor.toolbar = editorParams.toolbar;
+    customEditor.icon = editorParams.icon;
+    customEditor.confVariable = editorParams.confVariable;
+    customEditor.title = editorParams.title;
+    customEditor.tooltip = editorParams.tooltip;
+    this.editors[editorName] = customEditor;
+  }
+
+  /**
+   * Enables a {@link CustomEditor}.
+   * @param {String} customEditorName - The custom editor name.
+   */
+  enable(customEditorName) {
+    this.activeEditor = customEditorName;
+  }
+
+  /**
+   * Disables a {@link CustomEditor}.
+   */
+  disable() {
+    this.activeEditor = 'default';
+  }
+
+  /**
+   * Returns the active editor.
+   * @return {CustomEditor} - A {@link CustomEditor} if a custom editor is enabled. Null otherwise.
+   */
+  getActiveEditor() {
+    if (this.activeEditor !== 'default') {
+      return this.editors[this.activeEditor];
+    }
+    return null;
+  }
+}
+
+         </code>
+    </pre></div>
+<!-- Optional JavaScript -->
+<script>
+  //fix intend for code tag
+  document.querySelectorAll('pre').forEach(node => {
+    if (node.childNodes[0].nodeName === '#text')
+      node.childNodes[0].parentNode.removeChild(node.childNodes[0])
+  })
+  document.querySelectorAll('code').forEach(node => node.textContent = node.textContent.trim())
+</script>
+
+<script src="../../prism.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
