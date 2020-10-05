@@ -13,8 +13,7 @@
     "clean-all": "npm run clean & npx rimraf node_modules packages/*/node_modules demos/**/*/node_modules",
     "test": "node scripts/services/executeTests.js",
     "lint": "eslint . --ext .js",
-    "generate-docs": "jsdoc --configure .jsdoc.json --verbose",
-    "_jsdoc": "node ./node_modules/jsdoc/jsdoc.js -c jsdoc.conf.json"
+    "generate-docs": "jsdoc --configure .jsdoc.json --verbose"
   },
   "husky": {
     "hooks": {

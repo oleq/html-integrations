@@ -18,39 +18,41 @@
       "private": true,
       "recurse": true,
       "whitelist": ["Optional", "List", "Of", "Top", "Level", "Classes"],
-      "readme" : "readme_jsdoc.md",
+      "readme" : "README.md",
       "title": "sadasdasd",
       "template" : "node_modules/ub-jsdoc"      
     },
     "extendedConfig": {
       "navbar": {
         "logo": {
-          "img": "https://unitybase.info/img/UB-logo.png",
+          "img": "https://fme.upc.edu/ca/universitat-empresa/activitats/logos-fotos%20jornada-fme-empresa/wiris_mathandscience_transparent.jpg/@@images/image.jpeg",
           "href": "index.html"
         },
         "nav": [
           {
-            "href": "server-v5/index.html",
+            "href": "pages/tutorials/angular/generic.html",
             "name": "Server Docs"
           },
           {
-            "href": "ubpub-v5/index.html",
+            "href": "pages/tutorials/angular/generic.html",
             "name": "Client Docs"
           },
           {
-            "href": "server-v5/tutorialIndex.html",
+            "href": "pages/tutorials/angular/generic.html",
             "name": "Tutorials"
           },
           {
-            "href": "gettingstarted/index.html",
+            "href": "pages/tutorials/angular/generic.html",
             "name": "Getting Started"
           }
         ]
       },
       "extends": [
-        "./src/generators/gettingStarted",
         "./src/generators/mainDocPage"
-      ]
+      ],
+      "mainPageSideBar": {
+    
+      }
     },    
     "templates": {
       "cleverLinks": true,
