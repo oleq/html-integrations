@@ -20,4 +20,4 @@ jobs:
           github_token: ${{ secrets.GH_CICD_TOKEN }}
           workflow: deploy.yml
           workflow_conclusion: success
-          repo: plugins
+          repo: wiris/plugins
