@@ -10,3 +10,14 @@ jobs:
           node-version: '13'
       - run: npm install
       - run: npm test
+
+  test-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download backend
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{ secrets.GH_CICD_TOKEN }}
+          workflow: deploy.yml
+          workflow_conclusion: success
+          repo: wiris/plugins
