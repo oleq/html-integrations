@@ -33,4 +33,4 @@ jobs:
           EDITOR=generic docker-compose up -d
           sleep 30
           ls -al $GITHUB_WORKSPACE/pluginwiris_engine
-          curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=$GITHUB_WORKSPACE/pluginwiris_engine.war"
+          curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=$GITHUB_WORKSPACE/java-generic_wiris/pluginwiris_engine.war"
