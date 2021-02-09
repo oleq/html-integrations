@@ -29,5 +29,6 @@ jobs:
         run: |
           unzip "java-generic_wiris.zip" -d "java-generic_wiris"
           unzip "java-generic_wiris/pluginwiris_engine.war" -d "pluginwiris_engine"
+          cd docker/java
           EDITOR=generic docker-compose up -d
           curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=${{ env.GITHUB_WORKSPACE }}/pluginwiris_engine"
