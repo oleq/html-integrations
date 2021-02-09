@@ -31,6 +31,6 @@ jobs:
           cd docker/java
           EDITOR=generic docker-compose run -d -v "${GITHUB_WORKSPACE}/java-generic_wiris:${GITHUB_WORKSPACE}/java-generic_wiris" java8
           # Wait for server to be ready
-          sleep 10
+          sleep 30
           ls ${GITHUB_WORKSPACE}/java-generic_wiris/pluginwiris_engine.war
           curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=file:${GITHUB_WORKSPACE}/java-generic_wiris/pluginwiris_engine.war"
