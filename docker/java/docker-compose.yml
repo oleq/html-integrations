@@ -12,8 +12,3 @@ services:
       - EDITOR
     ports:
       - "8080:8080"
-
-    # Running default command.
-    # This prepares the WARs and also executes the default command of the Docker image
-    working_dir: /usr/local/tomcat
-    command: ["catalina.sh run"]
