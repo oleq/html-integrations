@@ -29,7 +29,7 @@ jobs:
         run: |
           unzip "java-generic_wiris.zip" -d "java-generic_wiris"
           cd docker/java
-          EDITOR=generic docker-compose run java8 -d -v "${GITHUB_WORKSPACE}/java-generic_wiris:${GITHUB_WORKSPACE}/java-generic_wiris"
+          EDITOR=generic docker-compose run -d -v "${GITHUB_WORKSPACE}/java-generic_wiris:${GITHUB_WORKSPACE}/java-generic_wiris" java8
           # Wait for server to be ready
           sleep 10
           ls ${GITHUB_WORKSPACE}/java-generic_wiris/pluginwiris_engine.war
