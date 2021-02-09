@@ -34,6 +34,7 @@ jobs:
           sleep 30
           curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=file:/java-generic_wiris/pluginwiris_engine.war"
           cd ../..
+          rm -rf **/package-lock.json
           mv lerna.demos.json lerna.json
           npm start
           cd packages/mathtype-generic
