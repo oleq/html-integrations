@@ -4,6 +4,7 @@ services:
     container_name: wiris-java-8
     image: tomcat:8.5.43-jdk8-openjdk
     volumes:
+      - "../../java-generic_wiris:/java-generic_wiris"
       # Add Catalina configuration to create a user and disable a few security policies.
       - "./catalina/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml"
       - "./catalina/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml"
