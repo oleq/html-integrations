@@ -31,8 +31,6 @@ jobs:
           cd docker/java
           EDITOR=generic docker-compose up -d
           # Wait for server to be ready
-          while [ -z "$page" ]; do
-              page=$(curl -s "http://localhost:8080")
-          done
+          sleep 10
           ls ${GITHUB_WORKSPACE}/java-generic_wiris/pluginwiris_engine.war
           curl -u test:testpass "http://localhost:8080/manager/text/deploy?path=/pluginwiris_engine&update=true&config=&war=file:${GITHUB_WORKSPACE}/java-generic_wiris/pluginwiris_engine.war"
