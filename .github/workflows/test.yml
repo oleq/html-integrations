@@ -22,12 +22,13 @@ jobs:
         with:
           repo: "wiris/plugins"
           version: "tags/latest"
-          file: "java-generic_wiris.zip"
+          file: "java-generic.zip"
           token: ${{ secrets.GH_CICD_TOKEN }}
 
       - name: Deploy backend
         run: |
           ls -al
+          unzip "java-generic.zip"
           unzip "java-generic_wiris.zip" -d "java-generic_wiris"
           cd docker/java
           EDITOR=generic docker-compose up -d
