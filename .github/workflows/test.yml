@@ -27,6 +27,7 @@ jobs:
 
       - name: Deploy backend
         run: |
+          ls -al
           unzip "java-generic_wiris.zip" -d "java-generic_wiris"
           cd docker/java
           EDITOR=generic docker-compose up -d
